@@ -190,9 +190,8 @@ typedef enum : NSUInteger {
 
 /**
  * Detaches the LLSimpleCamera from the parent view controller
- * @param vc The parent view controller.
  */
-- (void)detachFromViewController:(UIViewController *)vc;
+- (void)detach;
 
 /**
  * Changes the posiition of the camera (either back or front) and returns the final position.
