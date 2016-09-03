@@ -160,6 +160,13 @@ NSString *const LLSimpleCameraErrorDomain = @"LLSimpleCameraErrorDomain";
     [self didMoveToParentViewController:vc];
 }
 
+- (void)detachFromViewController:(UIViewController *)vc
+{
+  [self willMoveToParentViewController:nil];
+  [self.view removeFromSuperview];
+  [self removeFromParentViewController];
+}
+
 - (void)start
 {
     [LLSimpleCamera requestCameraPermission:^(BOOL granted) {
